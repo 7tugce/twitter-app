@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "~/*": ["./*"]
+    }
+  }
+}
+//../ ile src'ye gitmek yerine ~ ile gitmek için auto import yoksa
