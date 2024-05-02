@@ -3,15 +3,16 @@ import Button from "~/components/button";
 import { mainMenu } from "~/utils/consts";
 import More from "./more";
 import NewTweet from "./new";
+import { useSelector } from "react-redux";
 
-
+const account = useSelector((state)=>state.auth.currentAccount)
 export default function Menu() {
   return (
-    <nav className="mt-0.5 mb-1">
+    <nav className="mt-0.5 mb-1" key={account}>
       {mainMenu.map((menu, index) => {
         return (
           <NavLink
-            to={menu.path}
+            to={typeof menu.path ==="function" ? menu.path():menu.path}
             key={index}
             className="text-[#FFD1E3] py-1 block group"
           >
