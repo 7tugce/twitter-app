@@ -144,3 +144,82 @@ export const mainMenu = [
     ),
   },
 ];
+
+export const topics=[
+  { 
+    title:"Türkiye tarihinde gündemde",
+    topic:{
+      type:"tag",
+      value:"örümcekadam"
+    }
+  }
+  ,
+  { 
+    title:"Türkiye tarihinde gündemde",
+    topic:{
+      type:"query",
+      value:"Starlink"
+    },
+    postCount:13634
+  },  { 
+    title:"Türkiye tarihinde gündemde",
+    topic:{
+      type:"tag",
+      value:"örümcekadam"
+    }
+  }
+  ,
+  { 
+    title:"Türkiye tarihinde gündemde",
+    topic:{
+      type:"query",
+      value:"Starlink"
+    },
+    postCount:13634
+  },  { 
+    title:"Türkiye tarihinde gündemde",
+    topic:{
+      type:"tag",
+      value:"örümcekadam"
+    }
+  }
+  ,
+  { 
+    title:"Türkiye tarihinde gündemde",
+    topic:{
+      type:"query",
+      value:"Starlink"
+    },
+    postCount:13634
+  },  { 
+    title:"Türkiye tarihinde gündemde",
+    topic:{
+      type:"tag",
+      value:"örümcekadam"
+    }
+  }
+  ,
+  { 
+    title:"Türkiye tarihinde gündemde",
+    topic:{
+      type:"query",
+      value:"Starlink"
+    },
+    postCount:13634
+  },  { 
+    title:"Türkiye tarihinde gündemde",
+    topic:{
+      type:"tag",
+      value:"örümcekadam"
+    }
+  }
+  ,
+  { 
+    title:"Türkiye tarihinde gündemde",
+    topic:{
+      type:"query",
+      value:"Starlink"
+    },
+    postCount:13634
+  }
+]

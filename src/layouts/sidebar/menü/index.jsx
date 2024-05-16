@@ -5,10 +5,10 @@ import More from "./more";
 import NewTweet from "./new";
 import { useSelector } from "react-redux";
 
-const account = useSelector((state)=>state.auth.currentAccount)
+//const account = useSelector((state)=>state.auth.currentAccount)
 export default function Menu() {
   return (
-    <nav className="mt-0.5 mb-1" key={account}>
+    <nav className="mt-0.5 mb-1" >
       {mainMenu.map((menu, index) => {
         return (
           <NavLink
