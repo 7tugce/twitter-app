@@ -3,15 +3,16 @@ import { useClickAway } from "react-use";
 
 export default function Search() {
   const [query, setQuery] = useState("");
-  const [focus,setFocus]= useState(false)
-  const ref= useRef()
-useClickAway(ref,()=>{
-setFocus(false)
-})
+  const [focus, setFocus] = useState(false);
+  const ref = useRef();
+  useClickAway(ref, () => {
+    setFocus(false);
+  });
   return (
     <div
-    ref={ref}
-     className="min-h-[32px] h-[53px] mb-3 flex items-center sticky top-0 bg-inherit z-[10]">
+      ref={ref}
+      className="min-h-[32px] h-[53px] mb-3 flex items-center sticky top-0 bg-inherit z-[10]"
+    >
       <label className="h-[43px] rounded-full bg-[#EED3D9] block w-full group focus-within:bg-[#DBC4F0] relative">
         <div className="w-[56px] h-full flex items-center justify-center absolute top-0 left-0 pointer-events-none">
           <svg
@@ -32,19 +33,20 @@ setFocus(false)
           type="text"
           placeholder="Ara"
           value={query}
-          onFocus={()=>setFocus(true)}
-          onBlur={()=>setFocus(false)}
-          onChange={e=> setQuery(e.target.value)}
+          onFocus={() => setFocus(true)}
+          onBlur={() => setFocus(false)}
+          onChange={(e) => setQuery(e.target.value)}
           className="w-full h-full bg-transparent placeholder-[#374259] rounded-full outline-none pl-[40px] text-[15px]"
         />
 
-        {(query && focus )&&(
+        {query && focus && (
           <button
-          type="button"
-          onClick={()=>
-         { 
-          setQuery("")}} // burda eğer fonksiyon şeklinde vermezsen inputun içine yazı yazılmıyor
-           className="w-[22px] h-[22px] rounded-full flex items-center justify-center right-3 absolute top-1/2 -translate-y-1/2 invisible group-focus-within:visible">
+            type="button"
+            onClick={() => {
+              setQuery("");
+            }} // burda eğer fonksiyon şeklinde vermezsen inputun içine yazı yazılmıyor
+            className="w-[22px] h-[22px] rounded-full flex items-center justify-center right-3 absolute top-1/2 -translate-y-1/2 invisible group-focus-within:visible"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="26"
@@ -58,12 +60,14 @@ setFocus(false)
             </svg>
           </button>
         )}
-       
-      </label> {focus && (<div className="absolute w-[350px] -left-px -translate-y-1 top-full shadow-box max-h-[calc(80vh-53px)] rounded-lg bg-[#B5C0D0] text-[#627254] text-center min-h-[100px]">
-<p className="p-3 pt-5 leading-5">
-  Kişileri, listeleri veya anahtar kelimeleri aramayı dene.
-</p>
-        </div>)}
+      </label>{" "}
+      {focus && (
+        <div className="absolute w-[350px] -left-px -translate-y-1 top-full shadow-box max-h-[calc(80vh-53px)] rounded-lg bg-[#B5C0D0] text-[#627254] text-center min-h-[100px]">
+          <p className="p-3 pt-5 leading-5">
+            Kişileri, listeleri veya anahtar kelimeleri aramayı dene.
+          </p>
+        </div>
+      )}
     </div>
   );
 }
